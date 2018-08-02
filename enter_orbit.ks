@@ -13,6 +13,7 @@ when (cv:maxthrust = 0) and (cv:liquidfuel > 0) then {
 }.
 
 if aerobrake = 0 {
+	print "no aerobrake needed".
 	if cv:periapsis < targheight {
 		print "raising periapsis to avoid collision".
 		set cNode to node(time:seconds + 10,100,0,0).
@@ -28,8 +29,8 @@ if aerobrake = 0 {
 		lock throttle to 0.
 		remove cNode.
 	} else {
-		circularize().
-		chg_peri(targheight,30,.5,100).
+		//circularize().
+		chg_apo(targheight,30,.5,100).
 	}.
 	circ_pe().
 } else {

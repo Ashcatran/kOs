@@ -18,7 +18,7 @@ runpath("0:/dosafestage.ks").
 runpath("0:/autostage.ks").
 
 CountDown(3).
-gotoorbit(150000).
+//gotoorbit(150000).
 
 //print "targeting munar intercept".
 //set target to mun.
@@ -43,8 +43,9 @@ gotoorbit(150000).
 // kuniverse:timewarp:warpto(time:seconds + cv:orbit:nextpatcheta).
 // wait until body = kerbin.
 
-// circ_ap().
+//circ_ap().
 print "targeting minmus intercept".
+//set mapview to true.
 set target to minmus.
 match_incline().
 intercept().
@@ -54,21 +55,22 @@ intercept().
 kuniverse:timewarp:warpto(time:seconds + cv:orbit:nextpatcheta).
 wait until body = minmus.
 print "preparing for minmar capture".
-enter_orbit(6000).
+//enter_orbit(5000).
 
-print "preparing for minmar landing".
-rockland(2000).
-wait 3.
-print "Well, been there, done that. Let's go home".
+//set mapview to false.
+// print "preparing for minmar landing".
+// rockland(2000).
+// wait 3.
+// print "Well, been there, done that. Let's go home".
 
-gotoorbit(30000).
+// gotoorbit(30000).
 
-escape("up").
-wait 1.
-kuniverse:timewarp:warpto(time:seconds + cv:orbit:nextpatcheta).
-wait until body = kerbin.
-kuniverse:timewarp:warpto(time:seconds + 3600*5*10).
-print "initiating return sequence".
-paraland(30000,1,0,1000).
-print "Home, sweet home!".
+// escape("up").
+// wait 1.
+// kuniverse:timewarp:warpto(time:seconds + cv:orbit:nextpatcheta).
+// wait until body = kerbin.
+// kuniverse:timewarp:warpto(time:seconds + 3600*5*10).
+// print "initiating return sequence".
+// paraland(30000,1,0,1000).
+// print "Home, sweet home!".
 

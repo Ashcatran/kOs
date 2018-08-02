@@ -30,7 +30,8 @@ function goToOrbit {
     print "ship over body's atmosphere".
     print "deploying solar panels".
     panels on.
-    circularize().
+    //circularize().
+    circ_ap().
     print "Orbit Circularised at " + targetAltitude +"m".
     // Shut down engines
     lock throttle to 0.

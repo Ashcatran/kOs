@@ -116,7 +116,7 @@ declare parameter eNode, burnTo, timeToBurn.
 lock steering to burnTo.
 wait until dirmax(burnTo:direction-cv:facing) < 15.
 print "burn orientation achieved".
-kuniverse:timewarp:warpto(time:seconds + eNode:eta - abs(timeToBurn/2)).
+kuniverse:timewarp:warpto(time:seconds + eNode:eta - abs(timeToBurn/2)-5).
 wait until eNode:eta < abs(timeToBurn/2).
 
 print "starting node burn".
@@ -134,6 +134,6 @@ wait .2.
 lock throttle to 0.
 set cv:control:pilotmainthrottle to 0.
 unlock steering.
-sas on.
+//sas on.
 
 }.
